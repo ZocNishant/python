@@ -1,1 +1,0 @@
-print("Nepal ma basera kei the garxu.")
