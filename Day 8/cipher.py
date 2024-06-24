@@ -16,4 +16,17 @@ def encrypt(userInput, shiftingAmount):
         print(cipher_text)
         
  
+def decrypt(cipherText, shiftingAmount):
+    plaintext = ""
+    for letter in cipherText:
+        position = alphabet.index(letter)
+        new_position = position - shiftingAmount
+        plaintext += alphabet[new_position]
+    print(f"The decoded message is {plaintext}")
+
 encrypt(userInput=text, shiftingAmount=shift)
+
+if direction == "encode":
+    encrypt(plaintext=text, shiftingAmount=shift)
+else:
+    decrypt(cipherText=text, shiftingAmount=shift)
